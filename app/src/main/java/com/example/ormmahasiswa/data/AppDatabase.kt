@@ -7,19 +7,24 @@ import androidx.room.RoomDatabase
 import com.example.ormmahasiswa.data.dao.UserDao
 import com.example.ormmahasiswa.data.entity.User
 
-@Database(entities = [User::class], version = 4) // Increment version jika ada perubahan schema
+@Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
+
     abstract fun UserDao(): UserDao
 
-    companion object{
+    companion object {
         @Volatile
-        private var instance: AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase {
-            return instance ?: synchronized(this) {
-                instance ?: Room.databaseBuilder(context.applicationContext, AppDatabase::class.java, "app-database")
-                    .fallbackToDestructiveMigration()
-                    .build().also { instance = it }
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "user_database"
+                ).build()
+                INSTANCE = instance
+                instance
             }
         }
     }
