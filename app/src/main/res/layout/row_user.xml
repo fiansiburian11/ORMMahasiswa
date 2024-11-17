@@ -4,40 +4,98 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/nama_mahasiswa"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama Mahasiswa" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/nim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NIM" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Nama             :" />
 
-    <TextView
-        android:id="@+id/alamat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alamat" />
+        <TextView
+            android:id="@+id/nama_mahasiswa"
+            android:layout_width="278dp"
+            android:layout_height="match_parent"
+            android:text="Nama Mahasiswa" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/asal_sekolah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asal Sekolah" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Nim                :" />
 
-    <Button
-        android:id="@+id/btn_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete" />
+        <TextView
+            android:id="@+id/nim"
+            android:layout_width="276dp"
+            android:layout_height="match_parent"
+            android:text="NIM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Alamat           :" />
+
+        <TextView
+            android:id="@+id/alamat"
+            android:layout_width="279dp"
+            android:layout_height="match_parent"
+            android:text="Alamat" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:text="Asal Sekolah :" />
+
+        <TextView
+            android:id="@+id/asal_sekolah"
+            android:layout_width="281dp"
+            android:layout_height="match_parent"
+            android:text="Asal Sekolah" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="#CDDC39"
+            android:text="Edit"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="#CDDC39"
+            android:text="Delete"
+            android:textColor="#AD0606" />
+    </LinearLayout>
 
 </LinearLayout>
